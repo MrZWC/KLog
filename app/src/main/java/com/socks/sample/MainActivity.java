@@ -7,17 +7,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.TextHttpResponseHandler;
 import com.socks.library.KLog;
-
-import cz.msebera.android.httpclient.Header;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private static String JSON;
     private static String JSON_LONG;
     private static String STRING_LONG;
-    private AsyncHttpClient httpClient;
 
     private static Handler handler = new Handler() {
 
@@ -57,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        httpClient = new AsyncHttpClient();
         JSON_LONG = getResources().getString(R.string.json_long);
         JSON = getResources().getString(R.string.json);
         STRING_LONG = getString(R.string.string_long);
@@ -150,17 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void logWithXmlFromNet(View view) {
-        httpClient.get(this, URL_XML, new TextHttpResponseHandler() {
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                KLog.e(responseString);
-            }
 
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, String responseString) {
-                KLog.xml(responseString);
-            }
-        });
     }
 
     ///////////////////////////////////////////////////////////////////////////

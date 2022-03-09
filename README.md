@@ -2,6 +2,10 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-ZhaoKaiQiang-green.svg?style=true)](https://android-arsenal.com/details/1/2782)
 
+fork 的作者ZhaoKaiQiang的[KLog](https://github.com/ZhaoKaiQiang/KLog) 进行更改，因为原作者不维护了。
+主要变化：
+- 修复kotlin不能地位代码问题
+
 This is a useful log tool for Android 
 
 Android LogCat 工具类，目前功能：
@@ -18,7 +22,6 @@ Android LogCat 工具类，目前功能：
 - 支持变长参数，任意个数打印参数
 - 支持设置全局Tag
 
-中文文档请戳[这里](http://kaizige.vip/2016/06/13/klog/)。
 
 ---
 
@@ -36,16 +39,13 @@ Android LogCat 工具类，目前功能：
 
 ![](https://github.com/ZhaoKaiQiang/KLog/blob/master/image/demo.gif)
 
-##JCenter
+##mavenCentral
 
 ```
 dependencies {
     compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
 }
 ```
-##Eclipse
-
-You need add klog.jar into your project libs
 
 ##License
 
@@ -64,7 +64,3 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-
-##About me
-- [Android Developer](http://weibo.com/zhaokaiqiang1992)
-- [Blog](http://kaizige.vip/)
