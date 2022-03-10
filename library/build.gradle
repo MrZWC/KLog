@@ -1,5 +1,5 @@
 apply plugin: 'com.android.library'
-
+apply from: rootProject.file('new_mvn_push.gradle')
 android {
     compileSdkVersion 31
     defaultConfig {

@@ -43,7 +43,7 @@ Android LogCat 工具类，目前功能：
 
 ```
 dependencies {
-    compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+    implementation 'io.github.MrZWC:klog:2.0.0'
 }
 ```
 

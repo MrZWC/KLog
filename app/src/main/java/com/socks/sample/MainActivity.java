@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             KLog.d("Inner Class Test");
+            KLog.d("test","test");
         }
     };
 
